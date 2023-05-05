@@ -1,0 +1,52 @@
+<div class="container mt-5">
+
+    <div style="display: flex;justify-content: space-between;">
+
+        <h2>Project List </h2>
+
+        <button [routerLink]="['/dashboard/project/ajout']"  class="btn btn-primary"> Ajouter </button>
+
+    </div>
+
+    <div class="row mt-2">
+
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Programmation Language</th>
+                    <th>Technology</th>
+                    <th>Code Link </th>
+                    <th>CI tool </th>
+                    <th>CD tool</th>
+                    <th>option</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let pr of projects">
+                    <td> {{ pr.name }} </td>
+                    <td>{{ pr.proglanguage}}</td>
+                    <td>{{ pr.technology }}</td>
+                    <td> {{ pr.codelink }} </td>
+                    <td> {{ pr.ciTools }} </td>
+                    <td> {{ pr.cdTools }} </td>
+                    <td>
+                        <button (click)="delete(pr._id)"  class="btn btn-danger m-1"> delete </button>
+                        <button  [routerLink]="[ '/dashboard/project/update' , pr._id ]"  class="btn btn-info m-1"> update </button>
+
+                    </td>
+                </tr>
+            </tbody>
+
+
+        </table>
+
+
+
+
+    </div>
+
+
+</div>

@@ -1,0 +1,36 @@
+
+
+<div class="container mt-5">
+
+    <h2>Add project</h2>
+
+    <div class="row">
+
+        <div class="col-6 mx-auto">
+
+            <input [(ngModel)]="project.name" type="text" class="form-control m-2" placeholder="project name">
+            <input [(ngModel)]="project.proglanguage" type="text" class="form-control m-2" placeholder="programmation language ">
+            <input [(ngModel)]="project.technology" type="text" class="form-control m-2" placeholder="technology">
+            <input [(ngModel)]="project.codelink" type="text" class="form-control m-2" placeholder="code link">
+            
+            <select [(ngModel)]="project.ciTools" class="form-select form-control m-2"  id="validationDefault04" required>
+                  <option selected disabled value="">CI Tools.</option>
+                  <option>jenkins</option>
+                  <option>gitlab-CI</option>
+                  <option>github-Action</option>
+            </select>
+            <select [(ngModel)]="project.cdTools" class="form-select form-control m-2"  id="validationDefault04" required>
+                  <option selected disabled value="">CD Tools.</option>
+                  <option>Docker</option>
+                  <option>Kubernete</option>
+            </select>
+              
+
+            <button (click)="ajouter()" class="btn btn-primary form-control m-2">Ajouter</button>
+
+        </div>
+
+
+    </div>
+
+</div>
